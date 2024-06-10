@@ -1,6 +1,10 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;;
 class ProblemTest {
@@ -45,6 +49,18 @@ class ProblemTest {
         }
         assertEquals(60, weights);
         assertEquals(64, values);
+    }
+
+    @Test
+    public void testInstance() {
+        Problem problem = new Problem(10, 1, 1, 10);
+        List<Integer> result = problem.Solve(10).items;
+        List<Integer> required = new ArrayList<>();
+        required.add(6);
+        required.add(6);
+        assertEquals(required, result);
+
+
     }
 
 
